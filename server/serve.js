@@ -1,3 +1,4 @@
 WebApp.connectHandlers.use(function(req, res, next) {
-  res.end(JSON.stringify(process.env));
+  res.writeHead(302, {Location: 'http://status.meteor.com/'});
+  res.end();
 });
